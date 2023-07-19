@@ -34,7 +34,7 @@ if 'langchain_parser_outputs' not in st.session_state:
 
 
 colA, colB, colC = st.columns([2,1,2])
-colB.title("SCHEMAI", help="""{"DeepLearningAI": {"Langchain": {"Course": {"Section": "Langchain Prompt Templates And Output Parsers"}""")
+colB.title("SCHEMAI")
 tab1,tab2,tab3 = st.tabs(['INPUT + DIRECTIONS', 'AI GENERATED SCHEMES', 'CODE FOR PARSING SCHEMES'])
 title_col1, title_col2, title_col3 = st.columns([1,2,1])
 
