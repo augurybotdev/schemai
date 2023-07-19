@@ -4,3 +4,9 @@ backgroundColor="#D9D9D9"
 secondaryBackgroundColor="#E0F8FF"
 textColor="#0D1117"
 font="sans serif"
+
+[ui]
+hideTopBar=true
+
+[client]
+toobarMode="minimal"
