@@ -82,7 +82,7 @@ with about_bar:
     st.markdown("""There are a good number of presets in place for common data schemes as well.
     The model gives particular, special attention to the preset types. 
     I plan to continue to expand the LLM's and intensify with further learning as time goes on.
-    Feel free to supply your own custom data scheme with some concsise instructions.
+    Feel free to supply your own custom data scheme with some concise instructions.
     As you might expect, by choosing `custom` you can also just as easily, type the format you'd like to transform the data into """)
     
     st.divider()
@@ -90,10 +90,10 @@ with about_bar:
     st.markdown("""The second piece to this program is the automatic \
     generation of viable code for parsing and extracting the ai's response. \
     I believe this has the potential, if fully embraced, to create a new kind of experience we really haven't seen yet.
-    A big reason why, in my opinion, is because of the well known issue of parsing unpredictivle responses.""")
+    A big reason why, in my opinion, is because of the well known issue of parsing unpredictable responses.""")
     
     st.divider()
-    st.markdown("""While there have been a lot of amazing solutions to the predictibility / parsing problem lately coming out from
+    st.markdown("""While there have been a lot of amazing solutions to the predictability / parsing problem lately coming out from
     several places, most notably OpenAI's Python Functions, these responses merely give us a good working space with a solid
     surface to build on.""")
     
@@ -123,16 +123,32 @@ monkey_party = """ dict | key-value pairs example: 'party-monkeys! : party monke
 party-level: amateur, adults: 14, ages: 34-61, monkey-experience: none, package: introduction, monkey-bar: true : type: gorilla-keg, monkey-business: true : type: pick-pockets, host: orangatang-rapper, address: 12345-unknown-street-NY-New-York-512012"""
 clown_sense = """ xml example: 'clown-sense : clowns on demand api: order ticket'
 <?xml version="1.0" encoding="UTF-8"?>
-<clown-sense>
-    <quantity>2-clowns</quantity>
-    <location>little-bird-middle-school</location>
+<clown_sense>
+    <quantity>2 clowns</quantity>
+    <price_tier>6</price_tier>
+    <clowns>
+        <names>Jug Dead</names>
+        <names>Surely Mo Curly</names>
+    </clowns>
+    <location>little bird middle school</location>
+    <on_location_days>Monday, Wednesday</on_location_days>
     <bullies>
         <quantity>5</quantity>
-        <names>Jon_Milligan-Jillian_Hill-Jacob_Snyder-George_Milligan-Other_Na</names>
+        <names>
+            <name>Jonathan Farce</name>
+            <name>Jillian Shrill</name>
+            <name>Jacob Snitcher</name>
+            <name>Christopher Lombardi</name>
+            <name>TBD</name>
+        </names>
     </bullies>
-    <terror-level>medium</terror-level>
-    <service-description>clown-sense sends clowns to your school and will terrorize some sense into your school's bullies!</service-description>
-</clown-sense>"""
+    <method>surprise attack</method>
+        <intensity>low-mid to mid level trauma</intensity>
+        <details>Lure bully's one at a time. Corner turn, capture, restrain, threaten, plant seed, release. Coach other kids to gaslight, deny any clown sightings</details>
+        <extras_request>scary reminder, 2 days later. 1 for each bully. coordinate with customer contact</extras_request>
+    <service_description>Clown sense will send a real life scary a** clowns to terrorize some sense into your school's bullies!</service_description>
+</clown_sense>
+"""
 
 show_examples = tab1.checkbox('use example data', value=False, key='examples_checkbox')
     
@@ -218,7 +234,6 @@ langchain_parser_output = """chat_template = ChatPromptTemplate(template = promp
 
 prompt_template = ChatPromptTemplate.from_template(user_template)
 user_message_template = prompt_template.format_messages(text=text, selection=selection)
-parser_prompt_template = ChatPromptTemplate.from_template(parser_prompt)        
 instructions_template = ChatPromptTemplate.from_template(auto_instructions_prompt)
 col1, col2, col3 = tab1.columns([3,3,2])
 
@@ -251,7 +266,8 @@ if generate_schema_button:
                 st.markdown("**AI RESPONSE**")
                 response_text = expander["response"].replace('```', '')
                 st.code(response_text)
-        
+                
+        parser_prompt_template = ChatPromptTemplate.from_template(parser_prompt)        
         formatted_parser_prompt_template = parser_prompt_template.format_messages(schema = ai_response)
         ai_parser_code = chat(formatted_parser_prompt_template)
         parser_code = ai_parser_code.content
