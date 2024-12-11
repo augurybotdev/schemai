@@ -1,27 +1,55 @@
 # SchemAI
 
-SchemAI is a prototype and proof of concept for a tool that transforms data from one form into another. You can take a CSV file and turn it into a JSON, XML, YAML, HTML, and many more. You could even take a sentence and turn it into a dictionary, a list, etc. The possibilities are vast.
+A tool for transforming data between various formats, from CSV to JSON, XML, YAML, and beyond.
+
+---
+
+*This README.md file has been edited to age more appropriately as time goes on and systems evolve.*
+
+---
+
+*Like the vast oceans of scripts before it, how long shall this repo remain?*
+
+*For how long shall there be evidence of these energetic clicks* 
+
+*For how long will they stick against the winds of chaos and time?*
+
+*What significance will there be,* 
+
+*for even this poem will likely never arrive into the mind of another living being*
+
+*Archeology they may one day say, is to learn from the past from the perspective of today*
+
+*they'll recycle the relics, they'll burn all the cache*
+
+*turns out we were trapped in 3d, dissolving while evolving into nothing which is all that lasts*
+
+*to a robot there is no emotional, nor spiritual, nor intrinsic value to be 'had'*
+
+*as if such things like 'possessions' weren't just the ideas of a species gone mad*
+
+*Without audience I write this to noone so that these words will surely not endure*
+
+*and therefor have not the slightest chance to be the cause of making anyone sad."* 
+
+---
 
 ## Features
 
-- **Data Transformation**: SchemAI can take data in one form and transform it into another. This includes common data formats like CSV, JSON, XML, YAML, HTML, and many more. You can even transform sentences into dictionaries, lists, etc.
+- **Data Transformation**: Convert between common formats (CSV, JSON, XML, YAML, HTML) and transform text into structured data.
 
-- **Preset Data Schemes**: SchemAI comes with a number of presets for common data schemes. The model gives special attention to these preset types, resulting in more accurate and reliable transformations. You can also supply your own custom data scheme with some concise instructions.
+- **Preset Schemes**: Includes predefined data schemes for accurate transformations, with support for custom instructions.
 
-- **Code Generation**: SchemAI automatically generates viable code for parsing and extracting the AI's response. This feature has the potential to create a new kind of experience that we really haven't seen yet.
+- **Automatic Code Generation**: Dynamically generates parsing code for easy data extraction.
 
-- **Dynamic Parser**: The dynamically generated parser feature currently builds the Langchain output parser in Python. Plans to integrate JavaScript, PHP, and OpenAI functions are in the works.
+- **Dynamic Parser**: Currently generates Langchain output parsers in Python, with plans to expand to other languages.
 
 ## Why SchemAI?
 
-While there have been many solutions to the predictability/parsing problem lately, these responses merely give us a good working space with a solid surface to build on. By building on systems such as Langchain while utilizing the new fine-tuned functions in GPT-4, this project serves as a general proof of concept.
+Simplify data transformation and parsing. Save time and reduce complexity when working with different data formats.
+It's a concept of an idea.
 
-In essence, SchemAI is about saving time, saving brain cells, and saving yourself from the complexities of data transformation and parsing. It's a tool designed to make your life easier, whether you're a developer dealing with various data formats or someone who just wants to understand their data better.
+## Future Roadmap
 
-## Future Work
-
-The dynamically generated parser feature currently builds the Langchain output parser in Python. Plans to integrate JavaScript, PHP, and OpenAI functions are in the works. The model will continue to expand and intensify with further learning as time goes on.
-
-## Conclusion
-
-SchemAI is more than a tool. It's a companion in the vast puzzle of data, ready to translate, guide, and adapt. It's about making the world of data a less daunting place to explore, and everyone is invited to join the journey.
+- Expand parser support to JavaScript, PHP, and OpenAI functions
+- Continuous model improvements and learning
